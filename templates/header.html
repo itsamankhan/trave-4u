@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel</title>
+<!-- ================== Bootstrap cnd ================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- ================== CSS LINKS ================== -->
+    <link rel="stylesheet" href="\static\css\style.css">
+<!-- ==================Google Font CDN ================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<!-- ================== Font Awesome CDN ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+<!-- ================== header start ================== -->
+    <section class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+          <div class="container-fluid">
+          <a class="navbar-brand fs-2" href="index.html">TRA<span class="text-info">VEL</span><sub> 4U</sub></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+            <li class="nav-item">
+              <a class="{% if request.path == '/' %} active text-info {% endif %} nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="{% if request.path == '/about/' %} active text-info {% endif %} nav-link" href="{% url 'about' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our">Our team</a>
+            </li>
+            <li class="nav-item">
+              <a class="{% if request.path == '/contact/' %} active text-info {% endif %} nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+            </ul>
+            <img class="pro" src="/static/images/pro.jpg" alt="profile"> 
+          </div>
+          </div>
+        </nav>     
+      
+		<div class="heading">
+			<h1>TRAVEL ACROSS THE <span class="text-info">INDIA</span></h1>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search place or city">
+				<div class="input-group-append">
+					<button type="submit" class="input-group-text btn">Search</button>
+				</div>
+			</div>
+        <br>
+        {{ request.path }}
+      </div>
+      </div>
+    </section>
+  <!-- ============== header end ============== -->

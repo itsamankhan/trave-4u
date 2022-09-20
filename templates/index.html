@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ======================== features start ======================== -->    
+    <section class="features"  id="service">
+		<h2>Featured <span class="text-info">Destinations</span></h2>
+		<div class="container">
+			<div class="row">
+
+				{% for i in features_data %} 
+				<div class="col-md-4">
+					<div class="feature-box">
+						<div class="feature-img">
+						  <img src="{{ i.features_image }} ">
+							<div class="price">
+							  <p>{{ i.features_price }}</p>
+							</div>
+							<div class="rating">
+							  <i class="{{ i.features_rating_icon1 }}"></i>
+							  <i class="{{ i.features_rating_icon2 }}"></i>
+							  <i class="{{ i.features_rating_icon3 }}"></i>
+							  <i class="{{ i.features_rating_icon4 }}"></i>
+							  <i class="{{ i.features_rating_icon5 }}"></i>
+							</div>
+						</div>
+						<div class="features-details">
+						  <h4>{{ i.features_heading }}</h4>
+						  <p>{{ i.features_details | safe}}</p>
+						  <span><i class="fa-solid fa-location-dot"></i>{{ i.features_location }}</span>
+						  <span><i class="fa-regular fa-sun"></i>{{ i.features_days }}</span>
+						  <span><i class="fa-regular fa-moon"></i>{{ i.features_nights }}</span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+<!--2nd column       
+				<div class="col-md-4">
+					<div class="feature-box">
+						<div class="feature-img">
+							<img src="static/images/valley-of-flowers.png">
+							<div class="price">
+								<p>62$</p>
+							</div>
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+						<div class="features-details">
+							<h4>Valley of Flowers in Uttarakhand</h4>
+							<p>If you are in love with the vibrant colours of nature, this valley should feature on your list of beautiful tourist places in India.</p>
+							<span><i class="fa-solid fa-location-dot"></i>UK</span>
+							<span><i class="fa-regular fa-sun"></i>2 Days</span>
+							<span><i class="fa-regular fa-moon"></i>1 Night</span>
+						</div>
+					</div>
+				</div>
+<!--3rd column        
+				<div class="col-md-4">
+					<div class="feature-box">
+						<div class="feature-img">
+							<img src="static/images/dal-lake.png">
+							<div class="price">
+								<p>92$</p>
+							</div>
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa-regular fa-star-half-stroke"></i>
+							</div>
+						</div>
+						<div class="features-details">
+							<h4>Dal Lake in Srinagar</h4>
+							<p>The serene Dal Lake is one of the most beautiful places in India to visit before you die. </p>
+							<span><i class="fa-solid fa-location-dot"></i>Srinagar</span>
+							<span><i class="fa-regular fa-sun"></i>4 Days</span>
+							<span><i class="fa-regular fa-moon"></i>3 Night</span>
+						</div>
+					</div>
+				</div>
+<!--4th column 
+				<div class="col-md-4">
+					<div class="feature-box">
+						<div class="feature-img">
+							<img src="static/images/Dudhsagar.png">
+							<div class="price">
+								<p>70$</p>
+							</div>
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+						<div class="features-details">
+							<h4>Dudhsagar Falls in Goa</h4>
+							<p>If you wish to witness the true power of waterfalls, do give this one a shot.</p>
+							<span><i class="fa-solid fa-location-dot"></i>Goa</span>
+							<span><i class="fa-regular fa-sun"></i>3 Days</span>
+							<span><i class="fa-regular fa-moon"></i>2 Night</span>
+						</div>
+					</div>
+				</div>
+<!-- 5th column         
+				<div class="col-md-4">
+					<div class="feature-box">
+						<div class="feature-img">
+							<img src="static/images/Andaman-and-Nicobar-Islands.png">
+							<div class="price">
+								<p>80$</p>
+							</div>
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-stroke"></i>
+							</div>
+						</div>
+						<div class="features-details">
+							<h4>Andaman and Nicobar Islands</h4>
+							<p>Among the most beautiful places in India for couples during winter, Andaman and Nicobar Islands rank high for its serenity, coral reefs.</p>
+							<span><i class="fa-solid fa-location-dot"></i>Andaman</span>
+							<span><i class="fa-regular fa-sun"></i>4 Days</span>
+							<span><i class="fa-regular fa-moon"></i>3 Night</span>
+					  </div>
+					</div>
+				</div>
+<!-- 6th column         
+				<div class="col-md-4"> 
+					<div class="feature-box">
+						<div class="feature-img">
+							<img src="static/images/Wayanad.png">
+							<div class="price">
+								<p>56$</p>
+							</div>
+							<div class="rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-half-stroke"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+						<div class="features-details">
+							<h4>Wayanad in Kerala</h4>
+							<p>Among the most beautiful places to visit in India, the lush green and rustic district of Wayanad is a must mention. At a height of 2100m above sea level.</p>
+							<span><i class="fa-solid fa-location-dot"></i>Kerala</span>
+							<span><i class="fa-regular fa-sun"></i>2 Days</span>
+							<span><i class="fa-regular fa-moon"></i>1 Night</span>
+						</div>
+					</div>       
+				</div>
+			</div>
+		</div>
+	-->
+		<div class="button">
+			<button type="button" class="btn btn-info text-light">CLICK HERE FOR MORE PLACES</button>
+		</div>
+    </section>
+<!-- ======================== features end ======================== -->
+
+<!-- ======================== banner start ======================== -->
+    <section class="banner">
+		<div class="highlights">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Get 30% on top destinations</h2>
+						<p>Book your tickets before 30 Novmber and avail 30% flat discount.</p>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="booking-btn">Book Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+<!-- ======================== banner end ======================== -->
+
+<!-- ======================== team start ======================== -->
+    <section class="team" id="our">
+		<h2>Our <span class="text-info">Team</span></h2>
+		<div class="container">
+			<div class="row">
+<!-- 1st member -->
+				<div class="col-md-6">
+					<div class="team-box">
+						<div class="team-img">
+							<img src="static/images/team1.jpg">
+						</div>
+						<div class="team-detials">
+							<h4 class="text-center">Sameer <span class="text-info">Mark</span></h4>
+							<p class="mx-3 my-4">From a very early age, he love to travel. he's been fascinated by new languages and cultures, and he especially enjoys getting to know countries' politics and history. He Found the TRAVEL in 2008. Now he is helping lots of peoples to travel across the India. And he is doing this very well.</p>
+							<div class="d-grid gap-2">
+								<button class="btn btn-info text-light" type="button">Contact</button>
+							</div>
+						</div>
+					</div>
+				</div>
+<!--2nd member -->      
+				<div class="col-md-6">
+					<div class="team-box">
+						<div class="team-img">
+							<img src="static/images/team2.jpg">
+						</div>
+						<div class="team-detials">
+							<h4 class="text-center">Shivam <span class="text-info">Gupta</span></h4>
+							<p class="mx-3 my-4">Shivam works from our Delhi office as Integrator and oversees our company's business operations. From a very early age, he's been fascinated by new languages and cultures, and he especially enjoys getting to know countries' politics and history. He joined TRAVEL in 2009.</p>
+							<div class="d-grid gap-2">
+								<button class="btn btn-info text-light" type="button">Contact</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- ======================== team end ======================== -->
+{% endblock %}

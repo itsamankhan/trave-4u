@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ========================= HEADING start ========================= -->
+		<section class="heading my-5">
+			<div class="container">
+				<h2>Contact <span class="text-info">Us</span></h2>
+				<p>Follow us on social media for getting daily updates of our upcoming trip's plans. You can jion us on social media using given links in below section. We always active on social media.</p>
+			</div>
+		</section>    
+<!-- ========================= HEADING end ========================= -->
+
+<!-- ========================= contact start ========================= -->      
+    <section class="contact">
+        <div class="container">
+            <div class="heading-2">
+                <h2>Have You Any <span class="text-info">Question?</span></h2>
+                <h4 class="heading-2 text-center my-5">Send Us Mail. We are very responsive on social media.</h4>
+                <div class="row">
+					<div class="contact-form">
+						<div class="row">
+							<div class="form-item col-6">
+								<div class="form-group my-2">
+									<input type="text" class="form-control bg-dark text-info" placeholder="Name" name="name" value="{{user}}">
+								</div>
+							</div>
+							<div class="form-item col-6">
+								<div class="form-group my-2">
+									<input type="email" class="form-control bg-dark text-info" placeholder="Email" name="email" value="{{mail}}">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-item col-12">
+								<div class="form-group my-2">
+									<input type="text" class="form-control bg-dark text-info" placeholder="Subject" name="sub" value="{{subject}}">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-item col-12">
+								<div class="form-group my-2">
+									<textarea name="msg" class="form-control bg-dark text-info py-5" id="" placeholder="Message" value="{{msg}}"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group my-2">
+								<button type="submit" class="btn btn-info">Send Me Message</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+<!-- ========================= contact end ========================= -->
+
+<!-- ======================== team start ======================== -->
+    <section class="team" id="our">
+		<h2>Our <span class="text-info">Team</span></h2>
+		<div class="container">
+			<div class="row">
+<!-- 1st member -->
+				<div class="col-md-6">
+					<div class="team-box">
+						<div class="team-img">
+							<img src="/static/images/team1.jpg">
+						</div>
+						<div class="team-detials">
+							<h4 class="text-center">Sameer <span class="text-info">Mark</span></h4>
+							<p class="mx-3 my-4">From a very early age, he love to travel. he's been fascinated by new languages and cultures, and he especially enjoys getting to know countries' politics and history. He Found the TRAVEL in 2008. Now he is helping lots of peoples to travel across the India. And he is doing this very well.</p>
+							<div class="d-grid gap-2">
+								<button class="btn btn-info text-light" type="button">Contact</button>
+							</div>
+						</div>
+					</div>
+				</div>
+<!--2nd member -->      
+				<div class="col-md-6">
+					<div class="team-box">
+						<div class="team-img">
+							<img src="/static/images/team2.jpg">
+						</div>
+						<div class="team-detials">
+							<h4 class="text-center">Shivam <span class="text-info">Gupta</span></h4>
+							<p class="mx-3 my-4">Shivam works from our Delhi office as Integrator and oversees our company's business operations. From a very early age, he's been fascinated by new languages and cultures, and he especially enjoys getting to know countries' politics and history. He joined TRAVEL in 2009.</p>
+							<div class="d-grid gap-2">
+								<button class="btn btn-info text-light" type="button">Contact</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- ======================== team end ======================== -->
+    
+<!-- ======================== banner start ======================== -->
+    <section class="banner">
+		<div class="highlights">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Get 30% on top destinations</h2>
+						<p>Book your tickets before 30 Novmber and avail 30% flat discount.</p>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="booking-btn">Book Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+<!-- ======================== banner end ======================== -->
+{% endblock %}
